@@ -19,36 +19,56 @@ class RowPractise extends StatelessWidget {
           Icon(Icons.notifications,color: Colors.white,)
         ],
       ),
-      body: Row(children: [
-        Container(height: 50, width: 50,color: Colors.black,margin: EdgeInsets.all(10),),
-        Container(height: 50, width: 50,color: Colors.black,margin: EdgeInsets.all(10),),
-        Container(height: 50, width: 50,color: Colors.black,margin: EdgeInsets.all(10),),
-      ],),
-      // body: Column(
-      //   children: [
-      //     // Container(
-      //     //   height: 56,
-      //     //   width: 500,
-      //     //   margin: EdgeInsets.only(bottom: 20),
-      //     //   color: Colors.red,
-      //     //   child: Center(child: Text("Nadir",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w700),)),
-      //     // ),
-      //     // Container(
-      //     //   height: 50,
-      //     //   width: 100,
-      //     //   margin: EdgeInsets.only(bottom: 30),
-      //     //   decoration: BoxDecoration(
-      //     //       color: Colors.black,
-      //     //       borderRadius: BorderRadius.circular(12),
-      //     //       border: Border.all(width: 3,color: Colors.red)
-      //     //   ),
-      //     // ),
-      //     // Container(
-      //     //   height: 50,
-      //     //   color: Colors.blue,),
-      //   ],
-      // ),
+      body: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children:
+            [ Container(height: 100, width: 100,margin: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(50),
 
+                  border: Border.all(width: 3, color: Colors.blue)
+              ),
+            ),
+              Container(height: 100, width: 300,color: Colors.black,margin: EdgeInsets.all(10),),
+              Container(height: 100, width: 100,color: Colors.black,margin: EdgeInsets.all(10),),
+            ],
+          ),
+          Container(height: 200, width: 200,margin: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.only(topLeft:Radius.circular(40) ,bottomRight:Radius.circular(40) ,),
+                border: Border.all(width: 3, color: Colors.blue)
+            ),),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(height: 100, width: 100,margin: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.only(topRight:Radius.circular(40) ,bottomRight:Radius.circular(40) ,),
+                    border: Border.all(width: 3, color: Colors.blue)
+                ),),
+              Container(height: 100, width: 150,margin: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.only(topLeft:Radius.circular(40) ,bottomLeft:Radius.circular(40) ,),
+                    border: Border.all(width: 3, color: Colors.blue)
+                ),),
+              Container(height: 100, width: 100,margin: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.only(topRight:Radius.circular(100)  ,),
+                    border: Border.all(width: 3, color: Colors.blue)
+                ),),
+            ],
+          ),
+          Container(height: 50, width: 200, color: Colors.blueGrey,margin: EdgeInsets.all(10),
+          ),
+          Container(height: 5, width: 200,color: Colors. red,margin: EdgeInsets.all(10),),
+        ],),
     );
   }
 }
