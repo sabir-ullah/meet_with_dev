@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meet_with_dev/24_april_task.dart';
 import 'package:meet_with_dev/row_practise.dart';
-import 'package:meet_with_dev/twentyeight_april_class.dart';
+import 'package:meet_with_dev/twentyeight_april_classes/twentyeight_april_class.dart';
 
 void main() {
   runApp(const MyApp());
