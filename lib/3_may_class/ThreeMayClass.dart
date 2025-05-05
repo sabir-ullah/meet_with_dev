@@ -28,7 +28,7 @@ class ThreeMayClass extends StatelessWidget {
               borderRadius: BorderRadius.circular(500),
               child: Image.asset("assets/images/images.jpeg",height: 50,width: 50,fit: BoxFit.cover,),
           ),
-          title: Text("Irfan"),
+          title: Text("Irfan",style: TextStyle(fontSize: 20),),
           subtitle: Text("irfangomal88@gmail.com"),
           trailing: Icon(Icons.settings),
           ),
