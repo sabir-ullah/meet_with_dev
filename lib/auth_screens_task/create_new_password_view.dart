@@ -1,10 +1,7 @@
-
-///ForgotPassword
-
 import 'package:flutter/material.dart';
 
-class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({super.key});
+class CreateNewPassword extends StatelessWidget {
+  const CreateNewPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +25,7 @@ class ForgotPassword extends StatelessWidget {
               Column(mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Forgot Password",
+                    "Create New Password",
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w600,
@@ -38,7 +35,7 @@ class ForgotPassword extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    "enter the email address associated with your account",
+                    "Your new password must be different from Previously used Password. ",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
@@ -46,29 +43,20 @@ class ForgotPassword extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(height: 5),
-                  Text(
-                    "we will email a link to reset your password.",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xff000000),
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
                 ],
               ),
 
-              /// Email box
+              /// Password
               Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 spacing: 8,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Enter Email Address",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    "Password",
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
                   ),
                   TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderSide: BorderSide(
@@ -98,8 +86,58 @@ class ForgotPassword extends StatelessWidget {
                         ),
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      hintText: "Enter Your Email Address",
-                      prefixIcon: Icon(Icons.email_outlined),
+                      hintText: "************",
+                      prefixIcon: Icon(Icons.lock_outline),
+                      suffixIcon: Icon(Icons.visibility_off),
+                    ),
+                  ),
+                ],
+              ),
+
+              ///conform password
+
+              Column(
+                spacing: 8,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Conform Password",
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                  ),
+                  TextField(
+                    obscureText: true ,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0xff000000),
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      disabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0xff000000),
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0xff000000),
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0xff000000),
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      hintText: "Retype Password",
+                      prefixIcon: Icon(Icons.lock_outline),
+                      suffixIcon: Icon(Icons.visibility),
                     ),
                   ),
                 ],
@@ -118,7 +156,7 @@ class ForgotPassword extends StatelessWidget {
                     // Handle sign in logic
                   }
                 },
-                child: const Text('Send'),
+                child: const Text('Save'),
               ),
               const SizedBox(height: 48, width: 180),
               // Social media icons
