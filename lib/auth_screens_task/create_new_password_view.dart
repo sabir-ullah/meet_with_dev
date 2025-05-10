@@ -179,7 +179,7 @@ class CreateNewPassword extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Center(
-                      child: Image.asset("assets/images/Group 742.png"),
+                      child: Image.asset("assets/icon/google_icon.png"),
                     ),
                   ),
                   Container(
@@ -198,7 +198,7 @@ class CreateNewPassword extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Center(
-                      child: Image.asset("assets/images/Group 743 (1).png"),
+                      child: Image.asset("assets/icon/facebook_icon.png"),
                     ),
                   ),
                   Container(
@@ -217,7 +217,7 @@ class CreateNewPassword extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Center(
-                      child: Image.asset("assets/images/Group_744.png"),
+                      child: Image.asset("assets/icon/twitter_icon.png"),
                     ),
                   ),
                 ],

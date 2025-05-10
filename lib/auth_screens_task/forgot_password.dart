@@ -2,9 +2,10 @@
 ///ForgotPassword
 
 import 'package:flutter/material.dart';
+import 'package:meet_with_dev/auth_screens_task/create_new_password_view.dart';
 
-class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({super.key});
+class ForgotPasswordView extends StatelessWidget {
+  const ForgotPasswordView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,25 +38,28 @@ class ForgotPassword extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 10),
-                  Text(
-                    "enter the email address associated with your account",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Color(0xff000000),
+                  SizedBox(width: 230,child: Column(children: [
+                    Text(
+                      "Enter the email address associated with your account",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xff000000),
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "we will email a link to reset your password.",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xff000000),
+                    SizedBox(height: 5),
+                    Text(
+                      "we will email a link to reset your password.",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xff000000),
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
+                  ],),),
+
                 ],
               ),
 
@@ -115,7 +119,7 @@ class ForgotPassword extends StatelessWidget {
                 ),
                 onPressed: () {
                   {
-                    // Handle sign in logic
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateNewPassword()));
                   }
                 },
                 child: const Text('Send'),
@@ -141,7 +145,7 @@ class ForgotPassword extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Center(
-                      child: Image.asset("assets/images/Group 742.png"),
+                      child: Image.asset("assets/icon/google_icon.png"),
                     ),
                   ),
                   Container(
@@ -160,7 +164,7 @@ class ForgotPassword extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Center(
-                      child: Image.asset("assets/images/Group 743 (1).png"),
+                      child: Image.asset("assets/icon/facebook_icon.png"),
                     ),
                   ),
                   Container(
@@ -179,7 +183,7 @@ class ForgotPassword extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Center(
-                      child: Image.asset("assets/images/Group_744.png"),
+                      child: Image.asset("assets/icon/twitter_icon.png"),
                     ),
                   ),
                 ],

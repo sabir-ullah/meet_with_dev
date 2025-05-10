@@ -2,9 +2,10 @@
 ///SignUpScreen
 
 import 'package:flutter/material.dart';
+import 'package:meet_with_dev/widgets/auth_widgets.dart';
 
-class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
+class SignUpView extends StatelessWidget {
+  const SignUpView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class SignUpScreen extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Image.asset(
-                  "assets/images/image 34 (1).png",
+                  "assets/images/image 34.png",
                   height: 112,
                   width: 103,
                   fit: BoxFit.cover,
@@ -240,85 +241,7 @@ class SignUpScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               // Social media icons
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    height: 50,
-                    width: 70,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(
-                            0xff2323231A,
-                          ).withValues(alpha: 0.10),
-                          offset: Offset(0, 1),
-                          blurRadius: 6,
-                          spreadRadius: 0,
-                        ),
-                      ],
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Center(
-                      child: Image.asset("assets/images/Group 742.png"),
-                    ),
-                  ),
-                  Container(
-                    height: 50,
-                    width: 70,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(
-                            0xff2323231A,
-                          ).withValues(alpha: 0.10),
-                          offset: Offset(0, 1),
-                          blurRadius: 6,
-                          spreadRadius: 0,
-                        ),
-                      ],
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Center(
-                      child: Image.asset("assets/images/Group 743 (1).png"),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      child: Column(
-                        children: [
-                          Center(
-                            child: Container(
-                              height: 50,
-                              width: 70,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Color(
-                                      0xff2323231A,
-                                    ).withValues(alpha: 0.10),
-                                    offset: Offset(0, 1),
-                                    blurRadius: 6,
-                                    spreadRadius: 0,
-                                  ),
-                                ],
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              child: Center(
-                                child: Image.asset("assets/images/Group_744.png"),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              socialIconWidget(),
             ],
           ),
         ),
