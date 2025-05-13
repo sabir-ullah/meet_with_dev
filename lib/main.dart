@@ -1,17 +1,25 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:meet_with_dev/8_may_class/8_may_class.dart';
+import 'package:meet_with_dev/auth_screens_task/login_view.dart';
 import 'package:meet_with_dev/auth_screens_task/splash_view.dart';
+import 'package:sizer/sizer.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( DevicePreview(
+      enabled: true,
+      builder: (context) =>  MyApp()));
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: SplashView(),
-    debugShowCheckedModeBanner: false,
+    return Sizer(
+        builder: (context, orientation, screenType) {
+      return MaterialApp(home: SigninScreen(),
+        debugShowCheckedModeBanner: false,
+
+      );}
     );
   }
 }

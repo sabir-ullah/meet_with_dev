@@ -8,6 +8,7 @@ import 'package:meet_with_dev/3_may_class/auth_views_task/signupView.dart';
 import 'package:meet_with_dev/auth_screens_task/forgot_password.dart';
 import 'package:meet_with_dev/auth_screens_task/signup_view.dart';
 import 'package:meet_with_dev/widgets/auth_widgets.dart';
+import 'package:sizer/sizer.dart';
 
 class SigninScreen extends StatelessWidget {
   const SigninScreen({super.key});
@@ -17,28 +18,25 @@ class SigninScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xffFAFCFF),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(15.sp),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset(
-                  "assets/images/image 34.png",
-                  height: 112,
-                  width: 103,
-                  fit: BoxFit.cover,
-                ),
+              child: Image.asset(
+                "assets/images/image 34.png",
+                height: 20.2.h,
+                width: 20.2.h,
+                fit: BoxFit.contain,
               ),
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 2.0.h),
             Center(
               child: Text(
                 "Sign In",
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 22.sp,
 
                   fontWeight: FontWeight.w600,
                   color: Color(0xff000000),
@@ -49,7 +47,7 @@ class SigninScreen extends StatelessWidget {
             /// Login
             textFieldsTitleWidget("Email Address"),
 
-            SizedBox(height: 8,),
+            SizedBox(height: 0.8.h,),
 
             TextField(
               decoration: InputDecoration(
@@ -77,7 +75,7 @@ class SigninScreen extends StatelessWidget {
             /// Password
             textFieldsTitleWidget("Password"),
 
-            SizedBox(height: 8,),
+            SizedBox(height: 0.8.h,),
 
             TextField(
               obscureText: true,
@@ -104,7 +102,7 @@ class SigninScreen extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 20),
+            SizedBox(height: 2.0.h),
 
             Align(
                 alignment: Alignment.centerLeft,
@@ -115,16 +113,16 @@ class SigninScreen extends StatelessWidget {
             ElevatedButton.styleFrom(
               foregroundColor: Colors.white,
               backgroundColor: Color(0xff0E14AA),
-              minimumSize: const Size(double.infinity, 60),
+              minimumSize: Size(double.infinity, 6.7.h),
             ),
               onPressed: () {
                 {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUpView()));
                 }
               },
-              child: const Text('Sign In'),
+              child: Text('Sign In',style: TextStyle(fontSize: 17.sp,fontWeight: FontWeight.bold),),
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 2.0.h),
             // Social media icons
             socialIconWidget(),
             TextButton(onPressed: (){

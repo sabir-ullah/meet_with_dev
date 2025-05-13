@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:meet_with_dev/widgets/auth_widgets.dart';
+import 'package:sizer/sizer.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
@@ -225,19 +226,19 @@ class SignUpView extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               // Sign In button
-              ElevatedButton(
-                style:
+              ElevatedButton(style:
                 ElevatedButton.styleFrom(
+                  shape: StarBorder(),
                   foregroundColor: Colors.white,
                   backgroundColor: Color(0xff0E14AA),
-                  minimumSize: const Size(double.infinity, 60),
+                  minimumSize: Size(double.infinity, 6.7.h),
                 ),
                 onPressed: () {
                   {
-                    // Handle sign in logic
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUpView()));
                   }
                 },
-                child: const Text('Sign Up'),
+                child: Text('Sign Up',style: TextStyle(fontSize: 17.sp,fontWeight: FontWeight.bold),),
               ),
               const SizedBox(height: 20),
               // Social media icons
