@@ -3,10 +3,8 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:meet_with_dev/3_may_class/auth_views_task/forget_password_view.dart';
-import 'package:meet_with_dev/3_may_class/auth_views_task/signupView.dart';
-import 'package:meet_with_dev/auth_screens_task/forgot_password.dart';
-import 'package:meet_with_dev/auth_screens_task/signup_view.dart';
+import 'package:meet_with_dev/views/auth_screens_task/forgot_password.dart';
+import 'package:meet_with_dev/views/auth_screens_task/signup_view.dart';
 import 'package:meet_with_dev/widgets/auth_widgets.dart';
 import 'package:sizer/sizer.dart';
 

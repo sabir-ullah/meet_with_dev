@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meet_with_dev/3_may_class/auth_views_task/login_view.dart';
-import 'package:meet_with_dev/auth_screens_task/login_view.dart';
+import 'package:meet_with_dev/views/auth_screens_task/login_view.dart';
 import 'package:sizer/sizer.dart';
 class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);

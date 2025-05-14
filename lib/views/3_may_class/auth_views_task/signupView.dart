@@ -2,7 +2,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:meet_with_dev/3_may_class/auth_views_task/login_view.dart';
+import 'package:meet_with_dev/views/3_may_class/auth_views_task/login_view.dart';
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
 
