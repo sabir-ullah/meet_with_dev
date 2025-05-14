@@ -4,6 +4,8 @@
 import 'package:flutter/material.dart';
 import 'package:meet_with_dev/utils/app_colors.dart';
 import 'package:meet_with_dev/utils/app_images.dart';
+import 'package:meet_with_dev/views/3_may_class/auth_views_task/login_view.dart';
+import 'package:meet_with_dev/widgets/auth_widgets.dart';
 class ThreeMayClass extends StatelessWidget {
    ThreeMayClass({super.key});
   AppImages appImages = AppImages();
@@ -36,8 +38,9 @@ class ThreeMayClass extends StatelessWidget {
           ),
 
             /// cor circle
-            ListTile(leading: ClipOval(
-                child: Image.asset(AppImages.actressImage,height: 50,width: 50,fit: BoxFit.cover,)),),
+            tapeAbleListTileComp(AppImages.actressImage, (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
+            }),
 
             /// Circular
             CircleAvatar(backgroundImage: AssetImage(AppImages.actressImage),radius: 50,)
@@ -45,4 +48,5 @@ class ThreeMayClass extends StatelessWidget {
       )
     );
   }
+
 }

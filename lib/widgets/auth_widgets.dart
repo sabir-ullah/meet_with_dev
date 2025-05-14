@@ -39,3 +39,11 @@ Widget iconComp(String imagePath)=> Container(
     child: Image.asset(imagePath),//assets/icon/google_icon.png   assets/icon/facebook_icon.png   assets/icon/twitter_icon.png
   ),
 );
+
+Widget tapeAbleListTileComp(String image, Function onTap)=>  GestureDetector(
+  onTap: (){
+    onTap();
+  },
+  child: ListTile(leading: ClipOval(
+      child: Image.asset(image,height: 50,width: 50,fit: BoxFit.cover,)),),
+);
