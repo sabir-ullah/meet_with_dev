@@ -11,3 +11,4 @@ class TextWidget extends StatelessWidget {
     return Text(text,style: TextStyle(fontSize: fontSize, color: fontColor, fontWeight: fontWeight),);
   }
 }
+
