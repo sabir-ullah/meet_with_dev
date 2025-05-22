@@ -8,6 +8,16 @@ class DoctorListViewSlider extends StatelessWidget {
   DoctorListViewSlider({super.key});
   List imageList = [
     AppImages.splashImage,
+    AppImages.splashImage,
+    AppImages.actressImage,
+    AppImages.actressImage,
+    AppImages.splashImage,
+    AppImages.actressImage,
+    AppImages.splashImage,
+    AppImages.actressImage,
+    AppImages.splashImage,
+    AppImages.actressImage,
+    AppImages.splashImage,
     AppImages.actressImage,
   ];
   @override
@@ -42,22 +52,20 @@ class DoctorListViewSlider extends StatelessWidget {
           backgroundColor: Color(0xff0E14AA),
           leading: Icon(Icons.arrow_back_ios, color: Colors.white),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              spacing: 2.0.w,
-              children: [
-                Expanded(
-                  child: Image.asset("assets/images/gaot.png",fit: BoxFit.cover,height: 25.h,),
-                ),
-                Expanded(
-                  child: Image.asset("assets/images/suar.png",fit: BoxFit.cover,height: 25.h,),
-                )
-              ],
+        body: GridView.builder(
+          padding: EdgeInsets.all(15),
+          itemCount: imageList.length,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+              mainAxisSpacing: 12,
+              crossAxisSpacing: 12,
+              childAspectRatio: 1,
             ),
-          ],
+            itemBuilder: (context, index)=> imageCardComp(imageList[index])
         )
     );
   }
+  Widget imageCardComp(String imagePath)=>ClipRRect(
+      borderRadius: BorderRadius.circular(12),
+      child: Image.asset(imagePath,fit: BoxFit.cover,height: 25.h,));
 }
