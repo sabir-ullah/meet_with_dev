@@ -20,6 +20,23 @@ class DoctorListViewSlider extends StatelessWidget {
     AppImages.splashImage,
     AppImages.actressImage,
   ];
+  List<Map> items = [
+    {
+      "name": "irfan",
+      "image": AppImages.actressImage,
+      "subName": "1 3rd one"
+    },
+    {
+      "name": "Sabir",
+      "image": AppImages.splashImage,
+      "subName": "2 3rd one",
+    },
+    {
+      "name": "Bilal",
+      "image": AppImages.actressImage,
+      "subName": "3 3rd one"
+    },
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,18 +71,25 @@ class DoctorListViewSlider extends StatelessWidget {
         ),
         body: GridView.builder(
           padding: EdgeInsets.all(15),
-          itemCount: imageList.length,
+          itemCount: items.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
               mainAxisSpacing: 12,
               crossAxisSpacing: 12,
-              childAspectRatio: 1,
+              childAspectRatio: 0.6,
             ),
-            itemBuilder: (context, index)=> imageCardComp(imageList[index])
+            itemBuilder: (context, index)=> imageCardComp(imagePath:items[index]['image'],name:items[index]['name'],thirdOne: items[index]['subName'])
         )
     );
   }
-  Widget imageCardComp(String imagePath)=>ClipRRect(
-      borderRadius: BorderRadius.circular(12),
-      child: Image.asset(imagePath,fit: BoxFit.cover,height: 25.h,));
+  Widget imageCardComp({required String name, required String imagePath, required String thirdOne})=>Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Image.asset(imagePath,fit: BoxFit.cover,height: 25.h,width: Size.infinite.width,)),
+      Text(name,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+      Text(thirdOne),
+    ],
+  );
 }
