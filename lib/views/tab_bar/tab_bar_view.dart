@@ -9,6 +9,7 @@ class TabBarViewPractise extends StatefulWidget {
 
 class _TabBarViewPractiseState extends State<TabBarViewPractise> with TickerProviderStateMixin{
    late TabController tabController;
+   int index = 0;
    @override
   void initState() {
     // TODO: implement initState
@@ -45,6 +46,8 @@ class _TabBarViewPractiseState extends State<TabBarViewPractise> with TickerProv
           ]),
         )
       ],),
-    ),);
+    ),
+
+    );
   }
 }
