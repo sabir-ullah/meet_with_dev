@@ -12,12 +12,12 @@ class TabBarViewPractise extends StatefulWidget {
 class _TabBarViewPractiseState extends State<TabBarViewPractise> with TickerProviderStateMixin{
    late TabController tabController;
    int index = 0;
-   List<_SalesData> data = [
-     _SalesData('Jan', 35),
-     _SalesData('Feb', 28),
-     _SalesData('Mar', 34),
-     _SalesData('Apr', 32),
-     _SalesData('May', 40),
+   List data = [
+     // _SalesData('Jan', 35),
+     // _SalesData('Feb', 28),
+     // _SalesData('Mar', 34),
+     // _SalesData('Apr', 32),
+     // _SalesData('May', 40),
    ];
    @override
   void initState() {
@@ -67,25 +67,25 @@ class _TabBarViewPractiseState extends State<TabBarViewPractise> with TickerProv
         ),
     ),
 
-                SfCartesianChart(
-                  primaryXAxis: CategoryAxis(),
-                  // Chart title
-                  title: ChartTitle(text: 'Half yearly sales analysis'),
-                  // Enable legend
-                  legend: Legend(isVisible: true),
-                  // Enable tooltip
-                  tooltipBehavior: TooltipBehavior(enable: true),
-                  series: <CartesianSeries<_SalesData, String>>[
-                    LineSeries<_SalesData, String>(
-                      dataSource: data,
-                      xValueMapper: (_SalesData sales, _) => sales.year,
-                      yValueMapper: (_SalesData sales, _) => sales.sales,
-                      name: 'Sales',
-                      // Enable data label
-                      dataLabelSettings: DataLabelSettings(isVisible: true),
-                    ),
-                  ],
-                ),
+                // SfCartesianChart(
+                //   primaryXAxis: CategoryAxis(),
+                //   // Chart title
+                //   title: ChartTitle(text: 'Half yearly sales analysis'),
+                //   // Enable legend
+                //   legend: Legend(isVisible: true),
+                //   // Enable tooltip
+                //   tooltipBehavior: TooltipBehavior(enable: true),
+                //   series: <CartesianSeries, String>>[
+                //     LineSeries<_SalesData, String>(
+                //       dataSource: data,
+                //       xValueMapper: (_SalesData sales, _) => sales.year,
+                //       yValueMapper: (_SalesData sales, _) => sales.sales,
+                //       name: 'Sales',
+                //       // Enable data label
+                //       dataLabelSettings: DataLabelSettings(isVisible: true),
+                //     ),
+                //   ],
+                // ),
           ]),
         )
       ],),
