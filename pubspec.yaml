@@ -39,6 +39,7 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   debit_credit_card_widget: ^1.0.2
   syncfusion_flutter_charts: ^30.2.4
+  firebase_core: ^4.2.0
 
 
 dev_dependencies:

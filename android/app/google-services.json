@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "443282632703",
+    "project_id": "irfan-khan-53340",
+    "storage_bucket": "irfan-khan-53340.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443282632703:android:aafcf59c0b11be1317c1ca",
+        "android_client_info": {
+          "package_name": "com.example.meet_with_dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDROQZxegO_wrmHTepvqiiMk3d1DB4C27M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
